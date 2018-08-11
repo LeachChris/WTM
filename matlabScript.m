@@ -1,0 +1,1 @@
+valueDollar = csvread('valueDollar.xlsx');
