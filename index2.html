@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-i am very smart
+<script>
+  document.write("Welcome!".fontsize(10) + "</p>");
+</script>
+
 <html lang="en" >
 
 <head>
@@ -11,13 +14,11 @@ i am very smart
 
       <link rel="stylesheet" href="styles2.css">
 
-
 </head>
 
 <body>
-
+<p id="data1"></p>
   <main>
-
   <!-- the class "videoWrapper169" means a 16:9 aspect ration video. Another option is "videoWrapper43" for 4:3. -->
   <div class="videoWrapper videoWrapper169 js-videoWrapper">
     <!-- YouTube iframe. -->
@@ -30,14 +31,38 @@ i am very smart
 
 
 
+
 </main>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-
-
     <script  src="index2.js"></script>
 
+    <script>
+      var person = prompt("Lets get some information about you before we start!", "Please enter your name");
+    </script>
+    <script>
+      document.write("Hello ".fontsize(6) + person.fontsize(6) + "! It is nice to meet you!".fontsize(6) + "</p>");
+    </script>
 
+    <script>
+      $(document).ready(function() {
+        $.ajax({
+          type: "GET",
+          url: "valueDollar.txt",
+          dataType: "text",
+          success: function(data) {processData(data);}
+          });
+          });
+          function processData(allText) {
+            var allTextLines = allText.split("\n");
+            for (var i=1; i<allTextLines.length; i++) {
+              var data = allTextLines[i].split(',');
+            }
+          }
+        }
+        document.getElementById("data1").innerHTML =
+        "Your state is" + allTextLines(4) + "!";
+      </script>
 
 
 </body>
