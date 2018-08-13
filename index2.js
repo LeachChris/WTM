@@ -36,10 +36,10 @@ function videoStop($wrapper) {
 var person;
 
 function getName() {
-  document.write("Welcome!".fontsize(10) + "</p>");
+  document.write("Welcome!".fontsize(10).italics().bold().fontcolor("#99827d") + "</p>");
   person = prompt("Lets get some information about you before we start!", "Please enter your name");
 }
 
 function displayMessage() {
-  document.write("Hello ".fontsize(6) + person.fontsize(6) + "! It is nice to meet you!".fontsize(6) + "</p>");
+  document.write("Hello ".fontsize(6).fontcolor("#99827d").italics() + person.fontsize(6).fontcolor("#99827d").italics() + "! It is nice to meet you!".fontsize(6).fontcolor("#99827d").italics() + "</p>");
 }
