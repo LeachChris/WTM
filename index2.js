@@ -33,10 +33,12 @@ function videoStop($wrapper) {
 }
 
 // global person Variable
-var person;
+
+function welcome(){
+  document.write("Welcome!".fontsize(10).italics().bold().fontcolor("#99827d") + "</p>");
+}
 
 function getName() {
-  document.write("Welcome!".fontsize(10).italics().bold().fontcolor("#99827d") + "</p>");
   person = prompt("Lets get some information about you before we start!", "Please enter your name");
 }
 
