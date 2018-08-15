@@ -1,52 +1,52 @@
-﻿State,Value of Dollar
-Alabama,1.126126126
-Alaska,0.76394194
-Arizona,1.057082452
-Arkansas,1.126126126
-California,0.709219858
-Colorado,0.962463908
-Connecticut,0.786782061
-Delaware,0.948766603
-District of Columbia,0.618046972
-Florida,1.011122346
-Georgia,1.101321586
-Hawaii,0.536768653
-Idaho,1.078748652
-Illinois,1.034126163
-Indiana,1.092896175
-Iowa,1.088139282
-Kansas,1.117318436
-Kentucky,1.079913607
-Louisiana,1.070663812
-Maine,0.859845228
-Maryland,0.766871166
-Massachusetts,0.78369906
-Michigan,1.127395716
-Minnesota,0.998003992
-Mississippi,1.19047619
-Missouri,1.124859393
-Montana,0.962463908
-Nebraska,1.070663812
-Nevada,0.906618314
-New Hampshire,0.892857143
-New Jersey,0.844594595
-New Mexico,1.076426265
-New York,0.74682599
-North Carolina,1.064962726
-North Dakota,1.01010101
-Ohio,1.078748652
-Oklahoma,1.132502831
-Oregon,0.769230769
-Pennsylvania,0.988142292
-Rhode Island,0.818330606
-South Carolina,1.017293998
-South Dakota,0.988142292
-Tennessee,1.118568233
-Texas,1.095290252
-Utah,1.035196687
-Vermont,0.851788756
-Virginia,0.979431929
-Washington,0.923361034
-West Virginia,1.033057851
-Wisconsin,1.038421599
+State,Value of Dollar,
+Alabama,1.126126126,
+Alaska,0.76394194,
+Arizona,1.057082452,
+Arkansas,1.126126126,
+California,0.709219858,
+Colorado,0.962463908,
+Connecticut,0.786782061,
+Delaware,0.948766603,
+District of Columbia,0.618046972,
+Florida,1.011122346,
+Georgia,1.101321586,
+Hawaii,0.536768653,
+Idaho,1.078748652,
+Illinois,1.034126163,
+Indiana,1.092896175,
+Iowa,1.088139282,
+Kansas,1.117318436,
+Kentucky,1.079913607, 
+Louisiana,1.070663812,
+Maine,0.859845228,
+Maryland,0.766871166,
+Massachusetts,0.78369906,
+Michigan,1.127395716,
+Minnesota,0.998003992,
+Mississippi,1.19047619,
+Missouri,1.124859393,
+Montana,0.962463908,
+Nebraska,1.070663812,
+Nevada,0.906618314,
+New Hampshire,0.892857143,
+New Jersey,0.844594595,
+New Mexico,1.076426265,
+New York,0.74682599,
+North Carolina,1.064962726,
+North Dakota,1.01010101,
+Ohio,1.078748652,
+Oklahoma,1.132502831,
+Oregon,0.769230769,
+Pennsylvania,0.988142292,
+Rhode Island,0.818330606,
+South Carolina,1.017293998,
+South Dakota,0.988142292,
+Tennessee,1.118568233,
+Texas,1.095290252,
+Utah,1.035196687,
+Vermont,0.851788756,
+Virginia,0.979431929,
+Washington,0.923361034,
+West Virginia,1.033057851,
+Wisconsin,1.038421599,
 Wyoming,1.094091904
