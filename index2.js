@@ -47,7 +47,6 @@ function displayMessage() {
   document.write("Hello ".fontsize(6).fontcolor("#99827d").italics() + person.fontsize(6).fontcolor("#99827d").italics() + "! It is nice to meet you!".fontsize(6).fontcolor("#99827d").italics() + "</p>");
 }
 
-
 function getData(){
   var data = 'test';
   document.write("Here is your data: " + data + "</p>");
