@@ -1,3 +1,42 @@
+body {
+  margin: 0% 5%;
+  text-align: center;
+  font-family: sans-serif;
+  color: #9c6b72;
+}
+
+h1 {
+  margin: 4em 0;
+  color: #9c6b72;
+}
+
+.words{
+
+}
+
+h1 {
+  text-align: center;
+  overflow: hidden;
+}
+h1 span {
+  display: inline-block;
+  position: relative;
+}
+h1 span:before, h1 span:after {
+  content: "";
+  border-bottom: 6px solid #9c6b72;
+  width: 15em;
+  margin: 0 1.5em;
+  position: absolute;
+  bottom: .5em;
+}
+h1 span:before {
+  right: 100%;
+}
+h1 span:after {
+  left: 100%;
+}
+
 .videoWrapper {
   position: relative;
   width: 100%;
