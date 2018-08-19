@@ -32,6 +32,7 @@ function videoStop($wrapper) {
   $iframe.attr('src','');
 }
 
+
 // global person Variable
 
 function welcome(){
