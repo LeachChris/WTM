@@ -52,3 +52,33 @@ function getData(){
   var data = 'test';
   document.write("Here is your data: " + data + "</p>");
 }
+
+function test() {
+  document.write("tester");
+  console.log(0);
+}
+
+// Reads csv file into array!
+function init() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200)
+    {
+      console.log(this.responseText);
+      var lines = this.responseText.split("\n");
+      var strOut = "<ul>";
+      for ( i = 0; i < lines.length; i++)
+      {
+        var field = lines[i].split(",");
+        strOut += field;
+        strOut += "</a></li>";
+      }
+      strOut += "</ul>";
+      document.getElementById("output").innerHTML = strOut;
+      document.getElementById("output").innerHTML += "hi";
+    }
+  };
+  xhttp.open("GET", "valueDollar.csv", true);
+  xhttp.send();
+}
+window.onload = init;
