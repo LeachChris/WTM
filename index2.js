@@ -54,7 +54,7 @@ function getData(){
 }
 
 // Reads csv file into array!
-function init() {
+function init(fileID) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200)
@@ -72,7 +72,6 @@ function init() {
       document.getElementById("output").innerHTML = strOut;
     }
   };
-  xhttp.open("GET", "valueDollar.csv", true);
+  xhttp.open("GET", fileID, true);
   xhttp.send();
 }
-window.onload = init;
