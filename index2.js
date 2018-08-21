@@ -53,11 +53,6 @@ function getData(){
   document.write("Here is your data: " + data + "</p>");
 }
 
-function test() {
-  document.write("tester");
-  console.log(0);
-}
-
 // Reads csv file into array!
 function init() {
   var xhttp = new XMLHttpRequest();
@@ -75,7 +70,6 @@ function init() {
       }
       strOut += "</ul>";
       document.getElementById("output").innerHTML = strOut;
-      document.getElementById("output").innerHTML += "hi";
     }
   };
   xhttp.open("GET", "valueDollar.csv", true);
