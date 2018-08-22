@@ -56,6 +56,7 @@ function getData(){
 // Reads csv file into array!
 function init(fileID) {
   var xhttp = new XMLHttpRequest();
+  var strOut = "";
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200)
     {
@@ -69,9 +70,15 @@ function init(fileID) {
         strOut += "</a></li>";
       }
       strOut += "</ul>";
-      document.getElementById("output").innerHTML = strOut;
+      strOut = strOut.split(","); //BEST LINE IN THE CODE
+
+      return strOut;
     }
   };
   xhttp.open("GET", fileID, true);
   xhttp.send();
+}
+
+const toMoney = (x) => {
+  return "$"+x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
