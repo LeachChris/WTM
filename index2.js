@@ -71,8 +71,7 @@ function init(fileID) {
       }
       strOut += "</ul>";
       strOut = strOut.split(","); //BEST LINE IN THE CODE
-
-      return strOut;
+      document.getElementById("output").innerHTML = strOut;
     }
   };
   xhttp.open("GET", fileID, true);
