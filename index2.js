@@ -81,3 +81,31 @@ function init(fileID) {
 const toMoney = (x) => {
   return "$"+x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
+function getData(fileID) {
+  var xhttp = new XMLHttpRequest();
+  var strOut = "";
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200)
+    {
+      console.log(this.responseText);
+      var lines = this.responseText.split("\n");
+      var strOut = "<ul>";
+      for ( i = 0; i < lines.length; i++)
+      {
+        var field = lines[i].split(",");
+        strOut += field;
+        strOut += "</a></li>";
+      }
+      strOut += "</ul>";
+      strOut = strOut.split(","); //BEST LINE IN THE CODE
+      for ( i = 0; i < strOut.length; i++)
+      {
+        if(document.getElementById("output"+i) != null && document.getElementById("output"+i) != undefined)
+          document.getElementById("output"+i).innerHTML = strOut[i];
+      }
+    }
+  };
+  xhttp.open("GET", fileID, true);
+  xhttp.send();
+}

@@ -48,14 +48,19 @@
     </nav>
 
 <script>
-  init("meanWage.csv");
+  getData("meanWage.csv");
 </script>
-<div id="output"></div>
+
+<br>
+
+<div style="text-align:left">
+Please select which occupation most closely describes your expected career path.
+</div>
 
 <form id="NPSform"; style= "text-align:left">
   <script>
-    for (var i = 1; i <= 10; i++) {
-    document.write('<div><input type="radio" name="scores" id="i" value="i">'+ 'hello' + '</div>');
+    for (var i = 4; i <= 40; i=i+4) {
+    document.write('<input type="radio" name="occupation" value="output">' + '<div style="display:inline-block;" id="output' + i + '"' + '></div><br>');
       }
   </script>
   <input type="submit" name="mysubmit" value="Submit"/>
