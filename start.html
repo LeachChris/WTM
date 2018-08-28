@@ -57,7 +57,7 @@
 Please select which occupation most closely describes your expected career path.
 </div>
 
-<form id="NPSform"; style= "text-align:left">
+<form id = "NPSform"; style = "text-align:left" >
   <script>
     for (var i = 1; i < 23; i++) {
     document.write('<input type="radio" name="major" value="' + i + '">' + '<div style="display:inline-block;" id="major' + i + '"' + '></div><br>');
@@ -68,13 +68,12 @@ Please select which occupation most closely describes your expected career path.
 
 <form id = ""; style= "text-align:left">
   <script>
-    getMinor("meanWage.csv",1);
-    for (var i = 1; i <= 40 /*Fix this garbage, damnit.*/; i++) {
+    getMinor("meanWage.csv", 1);
+    for (i = 1; i <= 40 /*Fix this garbage, damnit.*/; i++) {
     document.write('<input type="radio" name="minor" value="' + i + '">' + '<div style="display:inline-block;" id="minor' + i + '"' + '></div><br>');
       }
   </script>
   <br><input type="submit" name="mysubmit" value="Submit"/><br><br>
 </form>
-
 </body>
 </html>

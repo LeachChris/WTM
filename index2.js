@@ -32,9 +32,6 @@ function videoStop($wrapper) {
   $iframe.attr('src','');
 }
 
-
-// global person Variable
-
 function welcome(){
   document.write("Welcome!".fontsize(10).italics().bold().fontcolor("#99827d") + "</p>");
 }
@@ -127,10 +124,9 @@ function getMinor(fileID,x) {
           }
       }
       document.getElementById("minor"+j).innerHTML = strOut[i];
-      //Return J somehow?
+
     }
   };
   xhttp.open("GET", fileID, true);
   xhttp.send();
-
 }
