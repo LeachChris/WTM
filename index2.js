@@ -53,42 +53,17 @@ function getData(){
   document.write("Here is your data: " + data + "</p>");
 }
 
-// Reads csv file into array!
-function init(fileID) {
-  var xhttp = new XMLHttpRequest();
-  var strOut = "";
-  xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200)
-    {
-      console.log(this.responseText);
-      var lines = this.responseText.split("\n");
-      var strOut = "<ul>";
-      for ( i = 0; i < lines.length; i++)
-      {
-        var field = lines[i].split(",");
-        strOut += field;
-        strOut += "</a></li>";
-      }
-      strOut += "</ul>";
-      strOut = strOut.split(","); //BEST LINE IN THE CODE
-      document.getElementById("output").innerHTML = strOut;
-    }
-  };
-  xhttp.open("GET", fileID, true);
-  xhttp.send();
-}
-
 const toMoney = (x) => {
   return "$"+x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-function getData(fileID) {
+function getMajor(fileID) {
   var xhttp = new XMLHttpRequest();
   var strOut = "";
+  var j = 1;
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200)
     {
-      console.log(this.responseText);
       var lines = this.responseText.split("\n");
       var strOut = "<ul>";
       for ( i = 0; i < lines.length; i++)
@@ -99,13 +74,63 @@ function getData(fileID) {
       }
       strOut += "</ul>";
       strOut = strOut.split(","); //BEST LINE IN THE CODE
-      for ( i = 0; i < strOut.length; i++)
+      for ( i = 8; i < strOut.length; i++)
       {
-        if(document.getElementById("output"+i) != null && document.getElementById("output"+i) != undefined)
-          document.getElementById("output"+i).innerHTML = strOut[i];
+        if(strOut[i+3]=='*'){
+        if(document.getElementById("major"+j) != null && document.getElementById("major"+j) != undefined)
+          {
+          document.getElementById("major"+j).innerHTML = strOut[i];
+          j++;
+          }
+        }
       }
     }
   };
   xhttp.open("GET", fileID, true);
   xhttp.send();
+}
+
+function getMinor(fileID,x) {
+  var xhttp = new XMLHttpRequest();
+  var strOut = "";
+  var j = 1;
+  var countstart = 0;
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200)
+    {
+      var lines = this.responseText.split("\n");
+      var strOut = "<ul>";
+      for ( i = 0; i < lines.length; i++)
+      {
+        var field = lines[i].split(",");
+        strOut += field;
+        strOut += "</a></li>";
+      }
+      strOut += "</ul>";
+      strOut = strOut.split(","); //BEST LINE IN THE CODE
+      for ( i = 8; i < strOut.length; i++)
+      {
+        if(strOut[i+3]=='*' && countstart != x){
+          countstart++;
+        }
+        else {
+          break;
+        }
+      }
+      i = i + 3;
+      for(i; strOut[i+7] != '*'; i = i + 4)
+      {
+        if(document.getElementById("minor"+j) != null && document.getElementById("minor"+j) != undefined)
+          {
+          document.getElementById("minor"+j).innerHTML = strOut[i];
+          j++;
+          }
+      }
+      document.getElementById("minor"+j).innerHTML = strOut[i];
+      //Return J somehow?
+    }
+  };
+  xhttp.open("GET", fileID, true);
+  xhttp.send();
+
 }
