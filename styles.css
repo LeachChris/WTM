@@ -642,3 +642,14 @@ a {
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
 }
+
+alert {
+  color: #FF0000;
+  font-size: 20px;
+}
+
+alertBody {
+  color: #FF0000;
+  font-size: 17px;
+  font-style: italic;
+}
