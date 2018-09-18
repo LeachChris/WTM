@@ -85,36 +85,37 @@ function getMajor(fileID) {
   };
   xhttp.open("GET", fileID, true);
   xhttp.send();
+  return 22;
 }
 
 function getMinor(fileID,x) {
   var xhttp = new XMLHttpRequest();
   var strOut = "";
   var j = 1;
-  var countstart = 0;
+  var countstart = 1;
+  var i = 12;
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200)
     {
       var lines = this.responseText.split("\n");
       var strOut = "<ul>";
-      for ( i = 0; i < lines.length; i++)
+      for ( k = 0; k < lines.length; k++)
       {
-        var field = lines[i].split(",");
+        var field = lines[k].split(",");
         strOut += field;
         strOut += "</a></li>";
       }
       strOut += "</ul>";
       strOut = strOut.split(","); //BEST LINE IN THE CODE
-      for ( i = 8; i < strOut.length; i++)
+
+      for(i; i < strOut.length && countstart != x; i = i + 4)
       {
-        if(strOut[i+3]=='*' && countstart != x){
+        if(strOut[i+3] == '*')
+        {
           countstart++;
         }
-        else {
-          break;
-        }
       }
-      i = i + 3;
+
       for(i; strOut[i+7] != '*'; i = i + 4)
       {
         if(document.getElementById("minor"+j) != null && document.getElementById("minor"+j) != undefined)
@@ -124,9 +125,10 @@ function getMinor(fileID,x) {
           }
       }
       document.getElementById("minor"+j).innerHTML = strOut[i];
-
     }
   };
   xhttp.open("GET", fileID, true);
   xhttp.send();
+
+  return i;
 }
