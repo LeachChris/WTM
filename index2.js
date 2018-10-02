@@ -83,9 +83,12 @@ function getMajor(fileID) {
       }
     }
   };
+
+  var end = 22;
+
   xhttp.open("GET", fileID, true);
   xhttp.send();
-  return 22;
+  return end;
 }
 
 function getMinor(fileID,x) {
@@ -130,5 +133,5 @@ function getMinor(fileID,x) {
   xhttp.open("GET", fileID, true);
   xhttp.send();
 
-  return i;
+  return 20;
 }

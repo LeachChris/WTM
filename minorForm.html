@@ -49,18 +49,22 @@
 <br>
 
 <div style="text-align:left">
-Please select which occupation type most closely describes your expected career path.
+Please select which occupation best descibes your career path.
 </div>
-
-<form action = "minorForm.html" method = "get" id = "majorForm"; style = "text-align:left" >
+<form method = "get" id = "minorForm"; style= "text-align:left">
   <script>
-    var stop = getMajor("meanWage.csv");
-    for (var i = 1; i <= stop; i++) {
-    document.write('<input type="radio" name="majorSelection"; value="' + i + '">' + '<div style="display:inline-block;" id="major' + i + '"' + '></div><br>');
+    var majorNum = 1; //STILL NEED TO FIX THIS
+    if(Number.isInteger(document.getElementsByClassName("majorSelection")))
+    {
+      majorNum = document.getElementsByClassName("majorSelection");
+    }
+
+    var stop = getMinor("meanWage.csv", majorNum);
+    for (var i = 1; i <= stop /*Fix this garbage, damnit.*/; i++) {
+    document.write('<input type="radio" name="minor" value="' + i + '">' + '<div style="display:inline-block;" id="minor' + i + '"' + '></div><br>');
       }
   </script>
-  <br><input type="submit" name="majorSubmit" value="Submit"/><br><br>
+  <br><input type="submit" name="mysubmit" value="Submit"/><br><br>
 </form>
-
 </body>
 </html>
